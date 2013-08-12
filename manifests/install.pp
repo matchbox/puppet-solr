@@ -5,8 +5,13 @@ class solr::install ($source_url, $home_dir, $solr_data_dir, $package, $cores) {
   $solr_home_dir = "${home_dir}"
   $destination = "$tmp_dir/$package.tgz"
 
-  user {solr:}
-  group {solr:}
+  user {solr:
+    ensure => present,
+    gid => "solr",
+  }
+  group {solr:
+    ensure => present
+  }
 
   package {"java-1.7.0-openjdk":
     ensure => present,

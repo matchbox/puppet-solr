@@ -19,9 +19,9 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class solr (
-      $source_url="http://apache.mirrors.lucidnetworks.net/lucene/solr/4.0.0/apache-solr-4.0.0.tgz",
+      $source_url="http://apache.mirrors.lucidnetworks.net/lucene/solr/4.4.0/solr-4.4.0.tgz",
       $home_dir="/usr/share/solr",
-      $package="apache-solr-4.0.0",
+      $package="solr-4.4.0",
       $solr_data_dir="/var/lib/solr/data",
       $cores = ['development','test'],
       ) {
