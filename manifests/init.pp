@@ -24,18 +24,14 @@ class solr (
       $package="apache-solr-4.0.0",
       $solr_data_dir="/var/lib/solr/data",
       $cores = ['development','test'],
-      $tomcat_connector_port="8983",
       ) {
 
-  include solr::params
-  
   class { "solr::install":
     source_url => $source_url,
     home_dir => $home_dir,
     package => $package,
     solr_data_dir => $solr_data_dir,
     cores => $cores,
-    tomcat_connector_port => $tomcat_connector_port,
   }
   
 }
